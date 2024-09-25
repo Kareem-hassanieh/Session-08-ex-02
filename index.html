@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first js project</title>
+</head>
+<body>
+    <script>
+        function addfive(){
+            let outputDisplay=document.getElementById('output');
+            let outputDisplayValue=outputDisplay.innerText;
+            outputDisplayValue=5+parseInt(outputDisplayValue);
+            outputDisplay.innerText=outputDisplayValue;
+        }
+        function subtractfive(){
+            let outputDisplay=document.getElementById('output');
+            let outputDisplayValue=outputDisplay.innerText;
+            outputDisplayValue=parseInt(outputDisplayValue)-5;
+            outputDisplay.innerText=outputDisplayValue;
+        }
+        function subtractone(){
+            let outputDisplay=document.getElementById('output');
+            let outputDisplayValue=outputDisplay.innerText;
+            outputDisplayValue=parseInt(outputDisplayValue)-1;
+            outputDisplay.innerText=outputDisplayValue;
+        }
+        function addone(){
+            let outputDisplay=document.getElementById('output');
+            let outputDisplayValue=outputDisplay.innerText;
+            outputDisplayValue=parseInt(outputDisplayValue)+1;
+            outputDisplay.innerText=outputDisplayValue;
+        }
+    </script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        .one{
+            display:flex;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        .one button{
+            border-radius: 50%;
+            border:1px solid green;
+            font-size: 30px;
+            padding:10px;
+        }
+        .three{
+            display:flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .three button{
+            border-radius: 50%;
+            border:1px solid green;
+            font-size: 30px;
+            padding:10px;
+        }
+        .two{
+            display:flex;
+            gap:50px;
+           
+
+        }
+        .two button{
+            border-radius: 50%;
+            border:1px solid green;
+            font-size: 30px;
+            padding:10px;
+        }
+        .two #output{
+            padding:auto;
+        }
+    </style>
+    <main>
+
+       <div class="one">
+        <button onclick="addfive()">+5</button>
+       </div>
+
+       <div class="two">
+        <button onclick="subtractone()">-1</button>
+        <button id="output">0</button>
+        <button onclick="addone()">+1</button>
+       </div>
+
+       <div class="three">
+        <button onclick="subtractfive()">-5</button>
+       </div>
+    </main>
+    
+</body>
+</html>
